@@ -4,14 +4,13 @@ import get from "@/app/api/get";
 
 function useFetch({
     url,
-    queryKey,
-    xClientId="partner_app",
+    queryKey, 
     enabled = true,
     contentType,
 }){
     return useQuery({
         queryKey,
-        queryFn: get({url, xClientId, contentType, signal, contentType}),
+        queryFn: get({url, contentType, signal, contentType}),
         enabled,
         retry:4,
         refetchOnWindowFocus: false,
