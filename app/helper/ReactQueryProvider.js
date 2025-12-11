@@ -33,7 +33,7 @@ const queryClient = new QueryClient({
     }
   }
 });
-
+ 
 queryClient.getQueryCache().subscribe((event) => {
   if (event && event.action && event.action.type === "error") {
     const err = event.action.error;

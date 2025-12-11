@@ -10,7 +10,7 @@ function useFetch({
 }){
     return useQuery({
         queryKey,
-        queryFn: get({url, contentType, signal, contentType}),
+        queryFn: ({ signal }) => get({ url, contentType, signal }),
         enabled,
         retry:4,
         refetchOnWindowFocus: false,
